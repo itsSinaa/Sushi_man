@@ -1,0 +1,193 @@
+.ternding {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-sushi,
+.trending-drinks {
+  display: flex;
+  flex-direction: row; /*col*/
+  min-height: 640px;
+}
+
+.trending__content {
+  padding: 32px 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 640px;
+  max-width: 640px;
+}
+
+.sushi__subtitle {
+  font-family: var(--plus-jakarta-sans);
+  font-size: 18px;
+  color: var(--primary-color);
+  letter-spacing: -0.01em;
+}
+
+.sushi__title {
+  margin-top: 1rem;
+  font-family: var(--playfair-display);
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.sushi__description {
+  font-family: var(--plus-jakarta-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: var(--secondary-color);
+  margin: 2rem 0;
+}
+
+.trending__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trending__list li {
+  list-style: none;
+  font-family: var(--plus-jakarta-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 210px;
+  height: fit-content;
+}
+
+.trending__icon {
+  background-color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.trending__icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.trending__image {
+  background-color: #fff;
+  position: relative;
+  flex: 1;
+  background-image: url("../../assets/japanese_sushi.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.trending-drinks .trending__image{
+  background-image: none;
+}
+
+.trending__image img {
+  width: 254px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.trending__arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.trending__arrow img {
+  object-fit: contain;
+}
+
+.trending__arrow-left {
+  left: -2.5px;
+  top: 12%;
+}
+
+.trending__arrow-left img,
+.trending__arrow-top img {
+  width: auto;
+  height: 100%;
+}
+
+.trending__arrow-top {
+  top: -10.5px;
+  left: 12%;
+}
+
+.trending__arrow-bottom {
+  bottom: -6.5px;
+  right: 12%;
+}
+
+.trending__arrow-bottom img,
+.trending__arrow-right img {
+  width: 100%;
+  height: auto;
+}
+
+.trending__arrow-right {
+  right: -2.5px;
+  bottom: 12%;
+}
+
+
+.trending-drinks .trending__list li{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  min-width: 210px;
+}
+
+.trending__discover{
+  position: absolute;
+  top: 44%;
+  right: 44%;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--plus-jakarta-sans);
+  color: #fff;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width:1270px){
+  .trending__discover,
+  .trending__arrow{
+    display: none !important;
+  }
+  .trending-sushi,
+  .trending-drinks{
+    flex-direction: column;
+  }
+  .trending-sushi .trending__image{
+    order:1;
+  }
+  
+  .trending-sushi .trending__content{
+    order:2;
+  }
+}
+
+@media only screen and (max-width:352px){
+  .popular-foods__card.popular-foods__card--active{
+    min-width: 300px !important;
+  }
+  
+}
