@@ -10,4 +10,4 @@ a simple yet beautiful landing page using CSS javascript AOS and swiper slide.
 
 ---
 
-## click [**here**]() to see the demo
+## click [**here**](https://itssinaa.github.io/Sushi_man) to see the demo
